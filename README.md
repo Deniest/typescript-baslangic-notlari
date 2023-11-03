@@ -27,7 +27,7 @@ Daha önemli yerlere değinelim,
 ## ECMASCRIPT
 ECMAScript, javascriptin temel belirtisini oluşturan ve dilin nasıl çalışması gerektiği konusunda rehberlik eden bir standarttır. Javascript bu standartı uygulayan bir dil olarak kabul edilir ve tarayıcılar ve diğer platformlar bu standarta uygun javascript motorlarını kullanarak javascript kodunu çalıştırırlar. 
 
-## Türlerden Sonuç Çıkarma
+## TypeScript'in Tür Atama Özelliği: Değişken Oluşturma ve Otomatik Tür Belirleme.
 TypeScript, JavaScript dilini bilir ve birçok durumda türleri otomatik olarak oluşturur. Örneğin, bir değişken oluştururken ve ona belirli bir değer atarken, TypeScript bu değeri anlayacak ve tipini ona göre belirtecektir.
 
 Örnek : 
@@ -39,7 +39,8 @@ let selamDunya = "Selam Dünya"
 ## TypeScript'te Tür Belirlemeleri
 Özet: Bu rehberde, TypeScript'te tür belirlemeleri hakkında bilgi edineceksiniz.
 
-TypeScript, değişkenler, fonksiyonlar, nesneler vb. gibi tanımlayıcılar için türleri açıkça belirtmek için tip belirteçlerini kullanır.
+TypeScript, değişkenler, fonksiyonlar, nesneler vb. gibi tanımlayıcılar için türleri açıkça belirtmek için tip belirteçlerini kullanır ve bu sayede program hataları önlenir.
+
 
 TypeScript, tür belirlemesi olarak bir değişkenin sonrasında :type sözdizimini kullanır, bu tür herhangi bir geçerli tür olabilir, örnek olarak :
 ```typescript
@@ -68,8 +69,7 @@ let tamSayi: number = 42;
 let ondalikSayi: number = 3.14;
 ```
 
-"number" türü, matematiksel işlemler, hesaplamalar ve sayısal verilerle çalışmak için kullanılır. TypeScript'te, bu türün kullanılması sayıların türünün belirtilmesini sağlar ve bu sayede program hataları önlenir.
-
+"number" türü, matematiksel işlemler, hesaplamalar ve sayısal verilerle çalışmak için kullanılır. TypeScript'te, bu türün kullanılması sayıların türünün belirtilmesini sağlar. 
 ### Sekizlik Sayılar (Octal Numbers)
 
 TypeScript'te "octal numbers," sekizlik sayıları ifade eder. Sekizlik sayılar, sekiz farklı rakamla (0-7) temsil edilir. Genellikle "0" öneki ile başlarlar. Örneğin, "034" bir sekizlik sayıdır.
