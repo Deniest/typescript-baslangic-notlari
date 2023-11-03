@@ -70,5 +70,25 @@ let ondalikSayi: number = 3.14;
 
 "number" türü, matematiksel işlemler, hesaplamalar ve sayısal verilerle çalışmak için kullanılır. TypeScript'te, bu türün kullanılması sayıların türünün belirtilmesini sağlar ve bu sayede program hataları önlenir.
 
+### Sekizlik Sayılar (Octal Numbers)
 
+TypeScript'te "octal numbers," sekizlik sayıları ifade eder. Sekizlik sayılar, sekiz farklı rakamla (0-7) temsil edilir. Genellikle "0" öneki ile başlarlar. Örneğin, "034" bir sekizlik sayıdır.
 
+Ancak TypeScript ve modern JavaScript dilinde, sekizlik sayıların kullanımı artık önerilmez ve büyük ölçüde terkedilmiştir. Sekizlik sayıları yerine ondalık (10 tabanında) sayılar veya hexadecimal (16 tabanında) sayılar kullanılması daha yaygındır.
+
+Eski tarayıcılar ve JavaScript uygulamaları için uyumluluk nedeniyle bazı durumlarda hala sekizlik sayılarla karşılaşılabilir, ancak genel olarak bu tür kullanımı sınırlıdır ve modern TypeScript ve JavaScript kodlamalarında pek yaygın değildir.
+
+```typescript
+let sekizlikSayi: number = 0o10;
+```
+
+### Hexadecimal Sayılar (Onaltılık Sayılar)
+16 farklı rakamla (0-9 ve A-F veya a-f) temsil edilen bir sayı sistemidir. TypeScript ve diğer birçok programlama dilinde, onaltılı sayıları ifade etmek için öneki "0x" veya "0X" kullanılır.
+Örneğin, "0x1A" bir onaltılı sayıdır. Bu, onaltılı bir sayının ondalık eşdeğeri olan 26'ya karşılık gelir.
+Onaltılı sayıların kullanımı özellikle bellek adresleri, renk kodları ve diğer özellikle sayısal değerlerle çalışırken yaygındır. Örneğin, HTML ve CSS'de renk kodları onaltılı formatta kullanılır (örneğin, "#FF0000" kırmızı rengi temsil eder).
+
+Örnek TypeScript kullanımı:
+```typescript
+let onaltılıSayi: number = 0x1A; // "0x" ile başlayan bir değer onaltılı bir sayıyı temsil eder
+```
+Onaltılı sayılar, özellikle düşük seviyeli programlamada ve donanım etkileşimlerinde kullanılırlar, ancak günlük yazılım geliştirmelerinde daha az yaygın olarak karşımıza çıkarlar.
