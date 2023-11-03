@@ -27,3 +27,48 @@ Daha önemli yerlere değinelim,
 ## ECMASCRIPT
 ECMAScript, javascriptin temel belirtisini oluşturan ve dilin nasıl çalışması gerektiği konusunda rehberlik eden bir standarttır. Javascript bu standartı uygulayan bir dil olarak kabul edilir ve tarayıcılar ve diğer platformlar bu standarta uygun javascript motorlarını kullanarak javascript kodunu çalıştırırlar. 
 
+## Türlerden Sonuç Çıkarma
+TypeScript, JavaScript dilini bilir ve birçok durumda türleri otomatik olarak oluşturur. Örneğin, bir değişken oluştururken ve ona belirli bir değer atarken, TypeScript bu değeri anlayacak ve tipini ona göre belirtecektir.
+
+Örnek : 
+```typescript
+let selamDunya = "Selam Dünya"
+//let selamDunya:string olarak typescript tarafından tip atanacaktır.
+```
+
+## TypeScript'te Tür Belirlemeleri
+Özet: Bu rehberde, TypeScript'te tür belirlemeleri hakkında bilgi edineceksiniz.
+
+TypeScript, değişkenler, fonksiyonlar, nesneler vb. gibi tanımlayıcılar için türleri açıkça belirtmek için tip belirteçlerini kullanır.
+
+TypeScript, tür belirlemesi olarak bir değişkenin sonrasında :type sözdizimini kullanır, bu tür herhangi bir geçerli tür olabilir, örnek olarak :
+```typescript
+let sayi:number 
+let isim:string 
+let obje:object 
+```
+
+Bir değişken bir türle belirtildiğinde, yalnızca o tür olarak kullanılabilir. Eğer değişken farklı bir tür olarak kullanılırsa, TypeScript derleyicisi bir hata verecektir. Örnek :
+
+```typescript
+let isim:string = "Can"
+isim = 30 //Burada hata verecektir çünkü string tipine number atamaya calısıyoruz.
+```
+
+Bu kodu javascriptte yazsaydık herhangi bir hata almayacaktık.
+
+## Sayılar (Numbers)
+Bu bölümde typsecriptte kulanılan number tipine bakacağız
+
+TypeScript'te "number" türü, sayıları temsil etmek için kullanılan bir veri türüdür. Bu tür, hem tam sayıları hem de ondalık (kayan noktalı) sayıları ifade eder. Yani, tamsayılar (örneğin, 42) ve ondalık sayılar (örneğin, 3.14) "number" türünün bir parçasıdır.
+
+
+```typescript
+let tamSayi: number = 42;
+let ondalikSayi: number = 3.14;
+```
+
+"number" türü, matematiksel işlemler, hesaplamalar ve sayısal verilerle çalışmak için kullanılır. TypeScript'te, bu türün kullanılması sayıların türünün belirtilmesini sağlar ve bu sayede program hataları önlenir.
+
+
+
