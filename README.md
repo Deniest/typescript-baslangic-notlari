@@ -193,3 +193,44 @@ const sondanIkinciKarakter = metin[metin.length - 2]; // Sondan ikinci karaktere
 console.log(sonKarakter); // a
 console.log(sondanIkinciKarakter); // y
 ```
+
+### Boolean Operatorler (Mantıksal Operatorler)
+Boolean, sadece iki değer içeren bir veri türüdür: "true" (doğru) ve "false" (yanlış). TypeScript, Boolean değerleri ifade etmek için "boolean" adında bir veri türü sunar. Boolean değerleri, çeşitli kararlar almak, koşullar belirlemek ve programın kontrol akışını yönlendirmek için sıkça kullanılır.
+
+Basit bir örnek yapalım,
+```typescript
+let girisYapmisMi: boolean = true; // Kullanıcının giriş yapmış olduğunu ifade eder.
+
+if (girisYapmisMi === true) {
+  console.log("Kullanıcı giriş yapmış.");
+} else {
+  console.log("Kullanıcı giriş yapmamış.");
+}
+```
+
+Not: if else yapıları ve karşılaştırma yapılarını daha önce görmemiş olabilirsiniz. Dert etmeyin her konunu kendi başlığı altında detaylıca açıklanacaktır fakat yukarıdaki kodu anlamanız için sözel olarak anlatacağım,
+
+```git
+let girisYapmisMi: boolean = true;
+Bu satırda, girisYapmisMi adında bir değişken tanımlıyoruz ve ona bir başlangıç değeri atıyoruz. boolean türünde olduğunu belirtmek için : boolean kullanıyoruz. Bu değişken, kullanıcının giriş yapmış olup olmadığını ifade eder.
+
+if (girisYapmisMi === true) {
+Burada, bir if koşulu başlatıyoruz. girisYapmisMi değişkeni true değerine eşit olduğunda, kodun bu bloğunu çalıştıracak.
+
+console.log("Kullanıcı giriş yapmış.");
+Eğer girisYapmisMi değişkeni true ise, bu satırda "Kullanıcı giriş yapmış." metni konsola yazdırılacak.
+
+} else {
+if koşulu karşılanmadıysa (false) olduğunda, bu bloğa geçeceğiz.
+
+console.log("Kullanıcı giriş yapmamış.");
+Eğer girisYapmisMi değişkeni false ise, bu satırda "Kullanıcı giriş yapmamış." metni konsola yazdırılacak.
+```
+
+### Mantıksal Operatorler
+
+- && (ve): İki koşulu kontrol eder ve her ikisi de true ise sonuç true, aksi takdirde false döner.
+- || (veya): İki koşulu kontrol eder ve her ikisi de false ise sonuç false, aksi takdirde true döner.
+- ! (değil): Bir koşulu tersine çevirir. true ise false, false ise true yapar.
+
+
