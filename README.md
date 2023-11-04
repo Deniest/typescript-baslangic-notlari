@@ -299,7 +299,7 @@ console.log(calisan.isim) // Konsol çıktısı : "Can" şeklinde olacaktır.
 Eğer var olmayan bir alana ulaşmak isterseniz typescript size hata verecektir.
 ```
 
-### object vs. Object
+### Object vs. object
 object (küçük harfle başlayan): Bu, JavaScript ve TypeScript'te bir veri türünü temsil eder. "object" türü, nesneleri, fonksiyonları, dizileri ve diğer karmaşık veri yapılarını ifade eder. Bu tür, herhangi bir nesneyi temsil etmek için kullanılır. TypeScript'de, bu tür genellikle nesnenin yapısı hakkında herhangi bir spesifik bilgi vermez, yani nesnenin özellikleri veya yöntemleri hakkında bir kısıtlama içermez.
 
 Örnek kullanım : 
