@@ -271,3 +271,49 @@ if (!havaYagmurlu) {
 
 ```
 
+### TypeScript'te "object" Türü
+TypeScript'te "object" türü, temel türler dışındaki her türlü değeri temsil eder. Temel türler arasında sayılar, büyük tamsayılar, dizeler, boole değerler, null, undefined ve semboller bulunur. "object" türü ise bu temel türlerin dışındaki her türdeki değeri temsil eder.
+
+```typescript
+// Bir değişken tanımlıyoruz ve object tipine atıyoruz.
+let calisan: object;
+
+// "calisan" değişkenine bir nesne ataması yapıyoruz
+calisan = {
+    isim: 'Can',
+    soyisim: 'Mert',
+    yas: 24,
+    meslek: 'Sığınmacı'
+};
+
+// Oluşturulan nesneyi konsola yazdıralım
+console.log(calisan); // { isim: 'Can', soyisim: 'Mert', yas: 24, meslek: 'Sığınmacı' }
+// şeklinde çıktımızı alırız.
+```
+
+Objenin içindeki field(alanlara) tek tek ulaşmak istersek : 
+
+Mesela "calisan" objesinin içindeki "isim" değişkenine ulaşmak istiyoruz,
+```typescript
+console.log(calisan.isim) // Konsol çıktısı : "Can" şeklinde olacaktır.
+Eğer var olmayan bir alana ulaşmak isterseniz typescript size hata verecektir.
+```
+
+### object vs. Object
+object (küçük harfle başlayan): Bu, JavaScript ve TypeScript'te bir veri türünü temsil eder. "object" türü, nesneleri, fonksiyonları, dizileri ve diğer karmaşık veri yapılarını ifade eder. Bu tür, herhangi bir nesneyi temsil etmek için kullanılır. TypeScript'de, bu tür genellikle nesnenin yapısı hakkında herhangi bir spesifik bilgi vermez, yani nesnenin özellikleri veya yöntemleri hakkında bir kısıtlama içermez.
+
+Örnek kullanım : 
+```typescript
+let insan: object = {
+  isim: "Can",
+  yas: 33
+};
+```
+
+Object (büyük harfle başlayan): Bu, JavaScript ve TypeScript'te "Object" sınıfını ifade eder. "Object" sınıfı, tüm nesnelerin temelini oluşturan bir JavaScript sınıfıdır. Bu sınıf, nesnelerin temel işlevselliğini sağlar. Ancak, bu genellikle doğrudan kullanılmaz ve JavaScript'te nesne oluşturmak için süslü parantezler {} kullanılır.
+
+```typescript
+let insan = new Object();
+insan.isim = "Can";
+insan.yas = 35;
+```
