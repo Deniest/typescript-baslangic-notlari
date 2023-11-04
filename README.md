@@ -187,7 +187,7 @@ console.log(altDizi); // "Merhaba"
 ### Tersten indeksleme 
 Stringlerde negatif indeksler kullanarak sondan başlayarak karakterlere erişebilirsiniz. -1 son karakteri temsil eder.
 ```typescript
-const metin = "Merhaba, Dünya!";
+const metin = "Merhaba, Dünya";
 const sonKarakter = metin[metin.length - 1]; // Son karaktere erişir (a)
 const sondanIkinciKarakter = metin[metin.length - 2]; // Sondan ikinci karaktere erişir (ı)
 console.log(sonKarakter); // a
