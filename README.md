@@ -92,3 +92,104 @@ Onaltılı sayıların kullanımı özellikle bellek adresleri, renk kodları ve
 let onaltılıSayi: number = 0x1A; // "0x" ile başlayan bir değer onaltılı bir sayıyı temsil eder
 ```
 Onaltılı sayılar, özellikle düşük seviyeli programlamada ve donanım etkileşimlerinde kullanılırlar, ancak günlük yazılım geliştirmelerinde daha az yaygın olarak karşımıza çıkarlar.
+
+### Büyük Sayılar (Big Integers)
+
+Büyük tam sayılar, 2^53 ve 1'den daha büyük olan tam sayıları temsil eder. sayının sonuna "n" karakterini ekleyerek oluşturulur. Peki neden böyle bir şey var ? 
+bigInt, özellikle büyük ve hassas tam sayı işlemlerine ihtiyaç duyulan durumlarda işe yarar. 
+
+Örnek:
+
+```typescript
+let büyükTamSayı: bigint = 9007199254740991n;
+```
+
+# String Nedir ? 
+"string" ifadesi metin veya metin verilerini temsil eden bir veri türünü ifade eder. Bir "string" değişkeni, metinsel karakterlerin bir dizisini saklar, 
+Peki bir stringi nasıl tanımlarız? ***" "*** çift tırnak veya tek tırnak ***' '*** veya ***` `**** içinde kullanarak metinsel ifademizi oluşturuabiliriz. Bir kaç örnek yapalım ve konu daha iyi anlaşılsın.
+
+```typescript
+let isim: string = "Can";
+//Bu şekilde isim değişkeni oluşturduk ve tipini string değerinide "Can" olarak atadık.
+//String Değerleri Kullanma:
+//Şimdi "string" değişkeninizi kullanabilirsiniz. Örneğin, bir "console.log" ifadesi kullanarak değeri görüntüleyebilirsiniz:
+console.log(isim);
+//Ekran çıktısı : Can
+```
+
+### Stringleri birleştirme işlemleri : 
+"string" verileri üzerinde çeşitli işlemler yapabilirsiniz. Örneğin, metin birleştirme (concatenation) işlemi yapabilirsiniz:
+```typescript
+let isim:string = "Can";
+let soyisim: string = "Mert";
+let tamAd: string = isim + " " + soyisim;
+console.log(tamAd); // "Can Mert" şeklinde konsol çıktısını alacağız.
+```
+
+### Stringleri metodları : 
+Metodlara bu bölümde deyinmeyeceğim çünkü yeni başladığınızı varsayıyorum ve yüzlerce metodu bir anda öprenmenizi istemiyorum o yüzden tek bir örnekle gideceğim.
+Makalemin diğer bölümlerinde string metodlarına tamamen değieneceğim eğer dilerseniz o bölüme gidebilirsiniz.
+
+Örneğin, bir metnin uzunluğunu öğrenmek için "length" özelliğini kullanabilirsiniz:
+
+```typescript
+let metin: string = "Merhaba, Dünya!";
+let uzunluk: number = metin.length; //metin değişkeninin uzunluğunu almamıza yarayan property
+console.log(uzunluk); // 13
+```
+
+Bir metod yapalım : 
+```typescript
+const orijinalMetin = "Can";
+const tersCevir = orijinalMetin.reverse()
+console.log(tersCevir) //Bu şekilde ekrana yazdırdığımızda "Nac" değerini alacağız.
+//Reverse metodu anladığımız üzere değeri tersine çevirmeye yarayan bir string metodudur.
+```
+### String interpolasyon (String interpolations)
+TypeScript ve diğer modern programlama dillerinde, bir string ifadesi içinde değişkenleri veya ifadeleri yerleştirmek için kullanılan bir tekniktir. TypeScript'te string interpolasyonu, template literals (şablon literal) olarak da adlandırılır ve genellikle `` (ters tırnak) karakterleri ile oluşturulur. Bu teknik, daha okunaklı ve esnek string oluşturmayı sağlar.
+
+```typescript
+const isim = "Can";
+const yas = 24;
+
+const mesaj = `Merhaba, benim adım ${isim} ve ${yas} yaşındayım.`;
+
+console.log(mesaj);
+// Çıktı: "Merhaba, benim adım Can ve 24 yaşındayım"
+
+```
+
+### String indeksleri
+Bir stringin belirli karakterlerine erişmek için kullanılan bir işlemdir. Stringler, karakter dizilerinden oluşur ve her karakterin bir sırası (indeksi) vardır. Bu indeksleri kullanarak string içindeki belirli karakterlere veya alt dizilere erişebilirsiniz.
+
+Peki bir metnin herhangi bir elemanına ulaşmak için nasıl bir yöntem izleriz? Örneklere  bakalım.
+
+Mesela bir string içindeki belirli karaktere erişmek için indeks kullanabilirsiniz. İndeksler sıfırdan başlar ve 0, ilk karakteri temsil eder.
+```typescript
+const metin = "Merhaba, Dünya!";
+const ilkKarakter = metin[0]; // İlk karakteri alır (M)
+const ikinciKarakter = metin[1]; // İkinci karakteri alır (e)
+console.log(ilkKarakter); // M
+console.log(ikinciKarakter); // e
+```
+Bu şekilde metnin içindeki belirli karakterlere erişebildik.
+Peki, ya birden çok karaktere erişmek istersem nasıl yapardım?
+Çözümü basit, javascriptin içinde bulunan ve stringlere ait olan slice metodu ile bu sorunu çözebiliriz.
+
+not: slice metodunun ayrıntısına metodlara özel yapılan bölümde değinilecektir.
+
+```typescript
+const metin = "Merhaba, Dünya!";
+const altDizi = metin.slice(0, 7); // İndeks 0'dan başlayarak 7. indekse kadar olan karakterleri alır
+console.log(altDizi); // "Merhaba"
+```
+
+### Tersten indeksleme 
+Stringlerde negatif indeksler kullanarak sondan başlayarak karakterlere erişebilirsiniz. -1 son karakteri temsil eder.
+```typescript
+const metin = "Merhaba, Dünya!";
+const sonKarakter = metin[metin.length - 1]; // Son karaktere erişir (a)
+const sondanIkinciKarakter = metin[metin.length - 2]; // Sondan ikinci karaktere erişir (ı)
+console.log(sonKarakter); // a
+console.log(sondanIkinciKarakter); // ı
+```
