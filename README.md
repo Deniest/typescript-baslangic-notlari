@@ -189,7 +189,7 @@ Stringlerde negatif indeksler kullanarak sondan başlayarak karakterlere erişeb
 ```typescript
 const metin = "Merhaba, Dünya";
 const sonKarakter = metin[metin.length - 1]; // Son karaktere erişir (a)
-const sondanIkinciKarakter = metin[metin.length - 2]; // Sondan ikinci karaktere erişir (ı)
+const sondanIkinciKarakter = metin[metin.length - 2]; // Sondan ikinci karaktere erişir (y)
 console.log(sonKarakter); // a
-console.log(sondanIkinciKarakter); // ı
+console.log(sondanIkinciKarakter); // y
 ```
