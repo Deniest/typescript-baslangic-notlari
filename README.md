@@ -233,4 +233,41 @@ Eğer girisYapmisMi değişkeni false ise, bu satırda "Kullanıcı giriş yapma
 - || (veya): İki koşulu kontrol eder ve her ikisi de false ise sonuç false, aksi takdirde true döner.
 - ! (değil): Bir koşulu tersine çevirir. true ise false, false ise true yapar.
 
+Operatorleri daha iyi anlamak adına örnekler yapalım : 
+
+```typescript
+// Örnek Değişkenler
+const x = 5;
+const y = 10;
+const z = 15;
+
+
+// && (ve) Operatörü
+if(x < y && z > y) {
+  console.log("x, y'den küçük VE y, z'den küçük.");
+} else {
+  console.log("Koşul sağlanmıyor.");
+}
+
+// || (veya) Operatörü
+//Not: hava durumları Kars'a göre hazırlanmıştır,hava güneşli olsada soğuk :D
+const havaGunesli = true;
+const havaSicak = false;
+
+if (havaGunesli === true || havaSicak === false) {
+  console.log("Hava ya güneşli ya da sıcak.");
+} else {
+  console.log("Koşul sağlanmıyor.");
+}
+
+// ! (değil) Operatörü
+const havaYagmurlu = false;
+
+if (!havaYagmurlu) {
+  console.log("Hava yağmurlu değil.");
+} else {
+  console.log("Koşul sağlanmıyor.");
+}
+
+```
 
